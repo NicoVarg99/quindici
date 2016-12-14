@@ -1,10 +1,35 @@
 //TESTATO SU FIREFOX
 
 
-//quindici = new Array("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","");
+quindici = new Array("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","");
 
 //Array contenente i numeri che andranno ordinati
-quindici = new Array("5","1","9","12","11","7","13","8","10","6","15","4","2","3","14","");
+//quindici = new Array("5","1","9","12","11","7","13","8","10","6","15","4","2","3","14","");
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function mescolaArray(){
+  for(i=0;i<quindici.length-2;i++){ //Ciclo da 0 a 15
+    //alert("Elemento "+i+"/"+quindici.length);
+
+    //scambia l'elemento con uno a caso fra i successivi
+
+    var random=getRandomInt(i,quindici.length-2);
+
+    //alert("Scambio el"+i+" con el"+random);
+    var tmp = quindici[i];
+    quindici[i]=quindici[random];
+    quindici[random]=tmp;
+
+
+
+  }
+
+  stampaArray();
+
+}
+
 
  function stampaArray(){
    //Stampa a video l'array
