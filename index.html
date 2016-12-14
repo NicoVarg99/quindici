@@ -1,38 +1,38 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/shuffle.js"></script>
   </head>
-  <body onload="mescolaArray()">
+  <body onload="mescolaArray();stampaArray();">
     <div>
       <h1>Gioco del 15!</h1>
       <p><b>Istruzioni: </b>ordina tutti i numeri da 1 a 15 terminando con la cella vuota in basso a destra.</p>
-
       <table>
-          <tr>
-            <td><button id="btn1" onclick="btnpress(1)">1</button></td>
-            <td><button id="btn2" onclick="btnpress(2)">2</button></td>
-            <td><button id="btn3" onclick="btnpress(3)">3</button></td>
-            <td><button id="btn4" onclick="btnpress(4)">4</button></td>
-          </tr>
-          <tr>
-            <td><button id="btn5" onclick="btnpress(5)">5</button></td>
-            <td><button id="btn6" onclick="btnpress(6)">6</button></td>
-            <td><button id="btn7" onclick="btnpress(7)">7</button></td>
-            <td><button id="btn8" onclick="btnpress(8)">8</button></td>
-          </tr>
-          <tr>
-            <td><button id="btn9" onclick="btnpress(9)">9</button></td>
-            <td><button id="btn10" onclick="btnpress(10)">10</button></td>
-            <td><button id="btn11" onclick="btnpress(11)">11</button></td>
-            <td><button id="btn12" onclick="btnpress(12)">12</button></td>
-          </tr>
-          <tr>
-            <td><button id="btn13" onclick="btnpress(13)">13</button></td>
-            <td><button id="btn14" onclick="btnpress(14)">14</button></td>
-            <td><button id="btn15" onclick="btnpress(15)">15</button></td>
-            <td><button id="btn16" onclick="btnpress(16)"></button></td>
-          </tr>
+        <tr>
+          <td><button class="fifteenBtn" id="btn1"  onclick="realBtnPress(1)" >1</button> </td>
+          <td><button class="fifteenBtn" id="btn2"  onclick="realBtnPress(2)" >2</button> </td>
+          <td><button class="fifteenBtn" id="btn3"  onclick="realBtnPress(3)" >3</button> </td>
+          <td><button class="fifteenBtn" id="btn4"  onclick="realBtnPress(4)" >4</button> </td>
+        </tr>
+        <tr>
+          <td><button class="fifteenBtn" id="btn5"  onclick="realBtnPress(5)" >5</button> </td>
+          <td><button class="fifteenBtn" id="btn6"  onclick="realBtnPress(6)" >6</button> </td>
+          <td><button class="fifteenBtn" id="btn7"  onclick="realBtnPress(7)" >7</button> </td>
+          <td><button class="fifteenBtn" id="btn8"  onclick="realBtnPress(8)" >8</button> </td>
+        </tr>
+        <tr>
+          <td><button class="fifteenBtn" id="btn9"  onclick="realBtnPress(9)"  >9</button> </td>
+          <td><button class="fifteenBtn" id="btn10" onclick="realBtnPress(10)" >10</button></td>
+          <td><button class="fifteenBtn" id="btn11" onclick="realBtnPress(11)" >11</button></td>
+          <td><button class="fifteenBtn" id="btn12" onclick="realBtnPress(12)" >12</button></td>
+        </tr>
+        <tr>
+          <td><button class="fifteenBtn" id="btn13" onclick="realBtnPress(13)" >13</button></td>
+          <td><button class="fifteenBtn" id="btn14" onclick="realBtnPress(14)" >14</button></td>
+          <td><button class="fifteenBtn" id="btn15" onclick="realBtnPress(15)" >15</button></td>
+          <td><button class="fifteenBtn" id="btn16" onclick="realBtnPress(16)" ></button>  </td>
+        </tr>
       </table>
 
 
