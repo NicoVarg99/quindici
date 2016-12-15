@@ -15,6 +15,8 @@ function mescolaArray(){
     setupBtnPress(getRandomInt(1,16));
   }
   stampaArray();
+  mosse=0;
+  document.getElementById('parMosse').innerText="Mosse: "+mosse;
 }
 
 function setupExchange(ca,cb){

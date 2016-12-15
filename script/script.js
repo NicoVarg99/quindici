@@ -1,5 +1,5 @@
 //TESTATO SU FIREFOX
-
+mosse = 0;
 quindici = new Array("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","");
 
 //Array contenente i numeri che andranno ordinati
@@ -14,11 +14,14 @@ function stampaArray(){
     var newText = quindici[i];
     document.getElementById("btn"+pos).innerText=newText;
 
+
     if(newText==""){ //Nasconde il bottone vuoto
       document.getElementById("btn"+pos).style.display="none";
     }else{ //Imposta come visibili tutti gli altri elementi
       document.getElementById("btn"+pos).style.display="inline-block";
     }
+
+
   }
 
 }
@@ -88,6 +91,10 @@ function trovaVuota(cella){
 
  function realExchange(ca,cb){
    //alert("realExchange: Scambio "+ca+" con "+cb+"!");
+   mosse++;
+
+   document.getElementById('parMosse').innerText="Mosse: "+mosse;
+
    quindici[ca-1]=document.getElementById("btn"+cb).innerText;
    quindici[cb-1]=document.getElementById("btn"+ca).innerText;
    stampaArray();

@@ -6,9 +6,9 @@
   </head>
   <body onload="mescolaArray();stampaArray();">
     <div>
-      <button onclick="mescolaArray();"></button>
       <h1>Gioco del 15!</h1>
       <p><b>Istruzioni: </b>ordina tutti i numeri da 1 a 15 terminando con la cella vuota in basso a destra.</p>
+
       <table>
         <tr>
           <td><button class="fifteenBtn" id="btn1"  onclick="realBtnPress(1)" >1</button> </td>
@@ -36,7 +36,8 @@
         </tr>
       </table>
 
-
+      <p id="parMosse">Mosse: 0</p>
+      <button onclick="mescolaArray();">Mescola</button>
     </div>
   </body>
 </html>
