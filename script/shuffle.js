@@ -3,23 +3,31 @@
 //vengono mescolati casualmente. Per questo si è deciso di simulare la pressione
 //dei tasti partendo da una configurazione valida.
 
+
+
 function getRandomInt(min, max) {
+  //Restituisce un numero intero casualmente fra min e max (compresi)
   return Math.floor(Math.random()*(max-min+1))+min;
 }
 
 function mescolaArray(){
-  for(i=0;i<2000;i++){ //Fa 2000 mosse a casuali in modo da mascolare le caselle
+  for(i=0;i<2000;i++){ //Fa 2000 mosse a casuali in modo da mescolare le caselle
     setupBtnPress(getRandomInt(1,16));
   }
+  stampaArray();
 }
 
 function setupExchange(ca,cb){
  //Scambia due elementi nell'array date le posizioni (0-15)
  //alert("setupExchange: scambio "+ca+"/15 con "+cb+"/15");
 
- var tmp=quindici[ca];
- quindici[ca]=quindici[cb];
- quindici[cb]=tmp;
+ if(quindici[ca]==""||quindici[cb]==""){
+    var tmp=quindici[ca];
+    quindici[ca]=quindici[cb];
+    quindici[cb]=tmp;
+ }else {
+    alert("setupExchange: ERRORE: Tentativo di scambio non valido ("+ca+"="+quindici[ca]+","+cb+"="+quindici[cb]+")");
+ }
 }
 
 function setupBtnPress(num){

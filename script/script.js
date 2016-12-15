@@ -21,7 +21,6 @@ function stampaArray(){
     }
   }
 
-
 }
 
 function isVuota(cella){
@@ -51,18 +50,22 @@ function trovaVuota(cella){
 
    var pos;
 
+   //Cerca a sinistra
    pos=cella-1;
-   if(isVuota(pos))
+   if(isVuota(pos)&&pos!=4&&pos!=8&&pos!=12)
     return pos;
 
+    //Cerca a destra
   pos=cella+1;
-  if(isVuota(pos))
+  if(isVuota(pos)&&pos!=5&&pos!=9&&pos!=13)
    return pos;
 
+   //Cerca giù
      pos=cella-4;
      if(isVuota(pos))
       return pos;
 
+      //Cerca su
     pos=cella+4;
     if(isVuota(pos))
      return pos;
